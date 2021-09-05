@@ -2,9 +2,9 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Generation Time: Sep 04, 2021 at 01:07 PM
--- Server version: 10.4.13-MariaDB
+-- Host: 127.0.0.1:3306
+-- Generation Time: Sep 05, 2021 at 08:23 PM
+-- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `hospital`
 --
+CREATE DATABASE IF NOT EXISTS `hospital` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `hospital`;
 
 -- --------------------------------------------------------
 
@@ -39,6 +41,30 @@ CREATE TABLE IF NOT EXISTS `doctor` (
 
 INSERT INTO `doctor` (`username`, `password`) VALUES
 ('Amir', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patient`
+--
+
+DROP TABLE IF EXISTS `patient`;
+CREATE TABLE IF NOT EXISTS `patient` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `surname` varchar(30) NOT NULL,
+  `contact` int(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `patient`
+--
+
+INSERT INTO `patient` (`id`, `name`, `surname`, `contact`) VALUES
+(1, 'Kemal', 'Duric', 61590842),
+(2, 'Juka', 'Juric', 62387461),
+(3, 'Nedim', 'Husic', 61857194);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

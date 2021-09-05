@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="395.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.DoctorController">
+   <center>
+      <TableView fx:id="tableViewPatients" prefHeight="395.0" prefWidth="564.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colPatientId" prefWidth="66.0" text="ID" />
+          <TableColumn fx:id="colPatientName" prefWidth="120.0" text="Ime" />
+          <TableColumn fx:id="colPatientSurname" prefWidth="127.0" text="Prezime" />
+          <TableColumn fx:id="colContact" prefWidth="174.0" text="Kontakt" />
+        </columns>
+      </TableView>
+   </center>
+   <right>
+      <VBox prefHeight="395.0" prefWidth="191.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField />
+            <Button fx:id="btnDodajPacijenta" mnemonicParsing="false" prefWidth="Infinity" text="Dodaj pacijenta" />
+            <Button fx:id="btnDodajDrzavu" mnemonicParsing="false" prefWidth="Infinity" text="Dodaj državu" />
+            <Button fx:id="btnIzmijeniGrad" mnemonicParsing="false" prefWidth="Infinity" text="Izmijeni grad" />
+            <Button fx:id="btnObrisiGrad" mnemonicParsing="false" prefWidth="Infinity" text="Obriši grad" />
+            <Button fx:id="btnZapisiJSON" mnemonicParsing="false" prefWidth="Infinity" text="Zapiši JSON" />
+            <Button fx:id="btnUcitajJSON" mnemonicParsing="false" prefWidth="Infinity" text="Učitaj JSON" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </right>
+</BorderPane>
